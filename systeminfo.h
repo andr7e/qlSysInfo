@@ -99,6 +99,9 @@ public:
     QString GetBiosVersion () const;
     QString GetBiosDate () const;
 
+    //
+    QString getDrivesInfo () const;
+
     //Loading
     bool LoadReleaseInfo ();
     bool LoadMotherboardInfo ();

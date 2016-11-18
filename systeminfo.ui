@@ -294,6 +294,13 @@
               </property>
              </widget>
             </item>
+            <item row="4" column="1">
+             <widget class="QLineEdit" name="lineEdit_cpu5">
+              <property name="readOnly">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
             <item row="1" column="1">
              <widget class="QLineEdit" name="lineEdit_cpu2">
               <property name="readOnly">
@@ -301,8 +308,8 @@
               </property>
              </widget>
             </item>
-            <item row="4" column="1">
-             <widget class="QLineEdit" name="lineEdit_cpu5">
+            <item row="5" column="1">
+             <widget class="QLineEdit" name="lineEdit_cpu6">
               <property name="readOnly">
                <bool>true</bool>
               </property>
@@ -315,8 +322,8 @@
               </property>
              </widget>
             </item>
-            <item row="5" column="1">
-             <widget class="QLineEdit" name="lineEdit_cpu6">
+            <item row="3" column="1">
+             <widget class="QLineEdit" name="lineEdit_cpu4">
               <property name="readOnly">
                <bool>true</bool>
               </property>
@@ -333,13 +340,6 @@
              <widget class="QLabel" name="label_12">
               <property name="text">
                <string>Name</string>
-              </property>
-             </widget>
-            </item>
-            <item row="3" column="1">
-             <widget class="QLineEdit" name="lineEdit_cpu4">
-              <property name="readOnly">
-               <bool>true</bool>
               </property>
              </widget>
             </item>
@@ -610,7 +610,14 @@
          <layout class="QHBoxLayout" name="horizontalLayout_7">
           <item>
            <layout class="QGridLayout" name="gridLayout_4">
-            <item row="3" column="1">
+            <item row="5" column="0">
+             <widget class="QLabel" name="label_24">
+              <property name="text">
+               <string>Drives</string>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="2">
              <widget class="QTextEdit" name="textEdit_dev2">
               <property name="sizePolicy">
                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
@@ -644,7 +651,7 @@
               </property>
              </widget>
             </item>
-            <item row="0" column="1">
+            <item row="0" column="2">
              <widget class="QTextEdit" name="textEdit_dev1">
               <property name="sizePolicy">
                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
@@ -657,12 +664,15 @@
               </property>
              </widget>
             </item>
-            <item row="4" column="1">
+            <item row="4" column="2">
              <widget class="QTextEdit" name="textEdit_dev3">
               <property name="readOnly">
                <bool>true</bool>
               </property>
              </widget>
+            </item>
+            <item row="5" column="2">
+             <widget class="QTextEdit" name="drivesTextEdit"/>
             </item>
            </layout>
           </item>
@@ -715,7 +725,7 @@
             <item>
              <widget class="QLabel" name="label_18">
               <property name="text">
-               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;span style=&quot; font-size:18pt; font-weight:600;&quot;&gt;qlSysInfo&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Show information for Linux system&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;v. 1.1 Beta 04.13 based on Qt&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;(c) 2012 - 2013 Andrey Efremov (ANDRE)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;span style=&quot; font-size:18pt; font-weight:600;&quot;&gt;qlSysInfo&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Show information for Linux system&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;v. 1.2 Beta based on Qt&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;(c) 2012 - 2016 Andrey Efremov (ANDRE)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
               </property>
               <property name="textInteractionFlags">
                <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByMouse</set>

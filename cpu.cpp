@@ -18,12 +18,17 @@
 
 bool SystemInfo::LoadCpuInfo ()
 {
-
     QStringList cpuKeys;
-    cpuKeys << KEY_CPU_VENDOR << KEY_CPU_MODEL_NAME << KEY_CPU_CORES
-             << KEY_CPU_FREQ  << KEY_CPU_CACHE << KEY_CPU_BOGOMIPS
-             << KEY_CPU_FAMILY << KEY_CPU_MODEL << KEY_CPU_STEPPING;
 
+    cpuKeys << KEY_CPU_VENDOR
+            << KEY_CPU_MODEL_NAME
+            << KEY_CPU_CORES
+            << KEY_CPU_FREQ
+            << KEY_CPU_CACHE
+            << KEY_CPU_BOGOMIPS
+            << KEY_CPU_FAMILY
+            << KEY_CPU_MODEL
+            << KEY_CPU_STEPPING;
 
     return Utils::ParseInfo (PROC_CPUINFO, cpuInfo_, cpuKeys);
 }

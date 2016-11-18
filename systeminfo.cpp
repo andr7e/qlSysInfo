@@ -4,6 +4,8 @@
 #include <QDesktopWidget>
 #include <QFileDialog>
 
+#include "utils.h"
+
 #define APP_ICON_STRING ":/images/iconsysinfo.png"
 
 SystemInfo::SystemInfo(QWidget *parent) :
@@ -88,6 +90,8 @@ void SystemInfo::copyDataToView ()
 
     ui->textEdit_dev3->setText (GetEthernet() + '\n' + GetNetwork());
 
+    ui->drivesTextEdit->setText (getDrivesInfo());
+
     //
     tmp.sprintf ("%d/%d Mb", GetUsedMemory(), GetTotalMemory());
     ui->lineEdit_mem1->setText (tmp);
@@ -133,4 +137,25 @@ void SystemInfo::makeScreenshot()
                                .arg(format));
 
     if (!fileName.isEmpty()) pixmap.save(fileName, format.toLatin1());
+}
+
+QString SystemInfo::getDrivesInfo() const
+{
+    QString path = "/proc/scsi/scsi";
+
+    QString text = Utils::readFile(path);
+
+    QStringList list = text.split("\n");
+
+    QStringList deviceList;
+
+    foreach (QString line, list)
+    {
+        if (line.contains("Vendor") || line.contains("Model"))
+        {
+            deviceList << line.simplified().trimmed();
+        }
+    }
+
+    return deviceList.join("\n");
 }

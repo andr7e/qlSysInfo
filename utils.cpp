@@ -44,3 +44,20 @@ bool Utils::ParseInfo (const QString &fname, QHash <QString, QString> &map, cons
 
     return 0;
 }
+
+QString Utils::readFile (const QString &fname)
+{
+    QFile fd(fname);
+
+    fd.open (QIODevice::ReadOnly);
+
+    if (fd.isOpen())
+    {
+        QString str = fd.readAll();
+        fd.close ();
+
+        return str;
+    }
+
+    return QString();
+}

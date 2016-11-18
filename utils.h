@@ -10,6 +10,8 @@ public:
     Utils();
 
     static bool ParseInfo (const QString &fname, QHash <QString, QString> &map, const QStringList &keys);
+
+    static QString readFile (const QString &fname);
 };
 
 #endif // UTILS_H
